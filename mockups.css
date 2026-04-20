@@ -2075,7 +2075,24 @@ a { text-decoration:none; color:inherit; }
 }
 
 @media (max-width: 480px) {
+    body { overflow-x: hidden; }
     .logo-gallery { grid-template-columns: 1fr; }
     .social-showcase { grid-template-columns: 1fr; }
-    .bcard { width: 100%; max-width: 340px; }
+    
+    /* Scale business cards to fit any screen */
+    .bcard-showcase { overflow: hidden; width: 100%; display: flex; flex-direction: column; align-items: center; }
+    .bcard-wrapper { transform: scale(0.85); transform-origin: top center; margin-bottom: -20px; }
+    
+    /* Fix invoice table bleed */
+    .invoice { padding: 24px 16px; }
+    .inv-table-header { display: none; }
+    .inv-table-row { grid-template-columns: 1fr; gap: 4px; border-bottom: 1px dotted var(--border); }
+    .inv-meta-row { flex-direction: column; gap: 2px; margin-bottom: 8px; }
+    
+    /* Fix web mockup bleed */
+    .web-mockup-frame { padding: 0px; border-width: 2px; border-top-width: 16px; }
+    .web-hero { min-height: 250px; padding: 24px 16px; }
+    .web-hero-title { font-size: 1.8rem; }
+    
+    .hang-tag, .email-sig { transform: scale(0.9); transform-origin: top center; }
 }

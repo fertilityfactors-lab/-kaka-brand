@@ -2207,13 +2207,26 @@ a {
 }
 
 @media (max-width: 480px) {
-    .cover-title { font-size: 3rem; }
-    .cover-tagline { font-size: 1.2rem; }
+    body { overflow-x: hidden; }
+    .cover-title { font-size: 2.8rem; }
+    .cover-tagline { font-size: 1.1rem; }
     .section-title { font-size: 1.8rem; }
     .logo-donts-grid { grid-template-columns: 1fr; }
     
     .occasion-grid { grid-template-columns: repeat(2, 1fr); }
     .cat-grid { flex-direction: column; }
+    
+    /* Logo scaling fixes */
+    .logo-display { min-height: 180px; padding: 20px; }
+    .logo-display img { max-height: 120px; }
+    .logo-var-display { padding: 20px; }
+    
+    /* Spacing fixes */
+    .clear-space-box { padding: 15px 25px; }
+    .cs-inner { font-size: 1.2rem; padding: 8px 16px; }
+    .cs-label { font-size: 0.5rem; }
+    
+    .material-card { padding: 20px; }
 }
 
 /* ==================== SCROLL ANIMATIONS ==================== */
