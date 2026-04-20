@@ -2072,22 +2072,32 @@ a { text-decoration:none; color:inherit; }
     .email-sig { flex-direction: column; }
     .sig-divider { width: 60px; height: 1px; }
     .nav-label { display: none; }
+    
+    .nav-logo { position: static; transform: none; }
 }
 
 @media (max-width: 480px) {
     body { overflow-x: hidden; }
+    
+    .mock-nav { padding: 16px 20px; }
+    .nav-back { font-size: 0.6rem; }
+    .nav-logo { font-size: 1.2rem; }
+    
     .logo-gallery { grid-template-columns: 1fr; }
     .social-showcase { grid-template-columns: 1fr; }
     
     /* Scale business cards to fit any screen */
     .bcard-showcase { overflow: hidden; width: 100%; display: flex; flex-direction: column; align-items: center; }
     .bcard-wrapper { transform: scale(0.85); transform-origin: top center; margin-bottom: -20px; }
+    .bcard-specs { flex-direction: column; align-items: flex-start; gap: 16px; }
     
     /* Fix invoice table bleed */
     .invoice { padding: 24px 16px; }
     .inv-table-header { display: none; }
     .inv-table-row { grid-template-columns: 1fr; gap: 4px; border-bottom: 1px dotted var(--border); }
     .inv-meta-row { flex-direction: column; gap: 2px; margin-bottom: 8px; }
+    
+    .web-products { grid-template-columns: 1fr; gap: 16px; }
     
     /* Fix web mockup bleed */
     .web-mockup-frame { padding: 0px; border-width: 2px; border-top-width: 16px; }
